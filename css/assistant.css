@@ -1,0 +1,357 @@
+.assistant-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.model-selector-container {
+    margin-bottom: 10px;
+}
+
+.model-selector-container select {
+    width: 100%;
+    padding: 8px;
+    background: #2d2d2d;
+    color: #d4d4d4;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #2d2d2d;
+    border-radius: 5px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: #264f78;
+    margin-left: 20px;
+}
+
+.ai-message {
+    background: #303030;
+    margin-right: 20px;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-container textarea {
+    flex: 1;
+    min-height: 60px;
+    padding: 8px;
+    background: #2d2d2d;
+    color: #d4d4d4;
+    border: 1px solid #3d3d3d;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.chat-input-container button {
+    padding: 0 20px;
+    background: #0e639c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input-container button:hover {
+    background: #1177bb;
+}
+
+.code-action-buttons {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.code-action-buttons button {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 3px;
+    background: #0e639c;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.code-action-buttons button:hover {
+    background: #1177bb;
+}
+
+.typing {
+    opacity: 0.7;
+}
+
+pre code {
+    background: #1e1e1e !important;
+    padding: 10px !important;
+    border-radius: 4px;
+}
+
+.diff-view {
+    margin: 15px 0;
+    background: #2d2d2d;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.diff-content {
+    max-height: 500px;
+    overflow: auto;
+    padding: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background-color: #1e1e1e;
+}
+
+.diff-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #2d2d2d;
+    border-top: 1px solid #3d3d3d;
+}
+
+.accept-changes, .reject-changes {
+    flex: 1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.accept-changes {
+    background-color: #1b4d1b;
+    color: white;
+}
+
+.accept-changes:hover {
+    background-color: #236923;
+}
+
+.reject-changes {
+    background-color: #4d1b1b;
+    color: white;
+}
+
+.reject-changes:hover {
+    background-color: #692323;
+}
+
+/* Update diff view styles */
+.diff-wrapper {
+    background: #1e1e1e;
+    border: 1px solid #3d3d3d;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.diff-header {
+    padding: 10px 15px;
+    background: #2d2d2d;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.diff-title {
+    color: #d4d4d4;
+    font-weight: 600;
+}
+
+.diff-content {
+    padding: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+/* Override Diff2Html styles */
+.d2h-wrapper {
+    background: none !important;
+}
+
+.d2h-file-header {
+    display: none !important;
+}
+
+.d2h-file-wrapper {
+    margin: 0 !important;
+    border: none !important;
+}
+
+.d2h-code-line {
+    padding: 0 8px !important;
+}
+
+.d2h-code-side-line {
+    color: #d4d4d4 !important;
+    background: none !important;
+}
+
+.d2h-code-line-prefix {
+    background: none !important;
+    border: none !important;
+}
+
+.d2h-code-side-linenumber {
+    color: #858585 !important;
+    border: none !important;
+    background: none !important;
+}
+
+/* Subtle backgrounds for changes */
+.d2h-ins {
+    background-color: rgba(27, 77, 27, 0.15) !important;
+}
+
+.d2h-del {
+    background-color: rgba(77, 27, 27, 0.15) !important;
+}
+
+.d2h-code-line-ctn {
+    background: none !important;
+}
+
+/* Improve diff line visibility */
+.d2h-code-side-emptyplaceholder {
+    background: rgba(77, 77, 77, 0.1) !important;
+}
+
+/* Scrollbar Styling */
+.chat-messages::-webkit-scrollbar,
+.diff-view::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track,
+.diff-view::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.chat-messages::-webkit-scrollbar-thumb,
+.diff-view::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover,
+.diff-view::-webkit-scrollbar-thumb:hover {
+    background-color: #505050;
+}
+
+.copy-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 4px 8px;
+    background: #0e639c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.copy-button:hover {
+    background: #1177bb;
+}
+
+pre {
+    position: relative;
+    padding-top: 30px !important;
+}
+
+.message pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #1e1e1e !important;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Add styles for diff within messages */
+.message .diff-wrapper {
+    margin-top: 15px;
+    background: #1e1e1e;
+    border: 1px solid #3d3d3d;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.message .diff-header {
+    padding: 8px 12px;
+    background: #2d2d2d;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.message .diff-title {
+    color: #d4d4d4;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.message .diff-content {
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+.message .diff-buttons {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #2d2d2d;
+    border-top: 1px solid #3d3d3d;
+}
+
+.message .accept-changes,
+.message .reject-changes {
+    flex: 1;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.message .accept-changes {
+    background-color: #1b4d1b;
+    color: white;
+}
+
+.message .accept-changes:hover {
+    background-color: #236923;
+}
+
+.message .reject-changes {
+    background-color: #4d1b1b;
+    color: white;
+}
+
+.message .reject-changes:hover {
+    background-color: #692323;
+} 
