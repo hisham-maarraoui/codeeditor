@@ -46,7 +46,8 @@ export class GroqService {
             const messages = [
                 {
                     role: "system",
-                    content: "You are a helpful coding assistant. When suggesting code changes, always format them as a diff in markdown with ```diff blocks."
+                    content: "You are a helpful coding assistant. When suggesting code changes, always format them in markdown."
+                    // maybe change the prompt to only give markdown instead of diffs (as changed in the prompt above), and then write code that would display an option for the user to first preview the suggested code changes in diff format, and then give the user an option to either accept or reject the code changes suggested by the model,
                 }
             ];
 
